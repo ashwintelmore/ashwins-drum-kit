@@ -7,10 +7,13 @@ body {
   text-align: center;
   background: rgb(216,255,0);
  background: linear-gradient(90deg, rgba(216,255,0,1) 0%, rgba(147,14,255,1) 49%, rgba(18,255,0,1) 100%);
-
+display: flex;
+flex-direction: column;
 position: relative;
 
 }
+
+
 
 body::before{
   content: '';
@@ -29,6 +32,11 @@ body::before{
 }
 
 #title{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
   padding-top: 50px;
   font-size: 5rem;
   color: #17ff00;
@@ -38,6 +46,12 @@ body::before{
   animation-duration: .4s;
   animation-iteration-count: infinite;
 }
+
+/* @media only screen and (max-width:400px) {
+  #title{
+    font-size: 3rem;
+  }
+} */
 
 @keyframes liting{
   0%{
@@ -55,10 +69,6 @@ body::before{
   text-shadow: 3px 0 #08dbd1;
 }
 
-footer {
-  color: #DBEDF3;
-  font-family: sans-serif;
-}
 
 .w {
     background-image: url(images/tom1.png);
@@ -95,31 +105,50 @@ footer {
 }
 
 .set {
-  margin: 10% auto;
+  margin: 10% 4%;
   outline: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+  grid-column-gap: 20px;
+  grid-column: 1 / -1;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: center; */
+  /* flex-wrap: wrap; */
 }
 
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-  
+
+@media only screen and (max-width:360px){
+  .set{
+    grid-template-columns: auto auto ;
+    /* margin-left: 10%; */
+    margin: 00% 0%;
+    grid-column-gap: 0px;
+  }
+
+}
+@media only screen and (min-width:360px) and (max-width:765px){
+  .set{
+    grid-template-columns: auto auto auto ;
+    margin: 00% 0%;
+    grid-column-gap: 0px;
+  }
+  .drum:nth-last-child(1):nth-child(odd) {
+    grid-column: 2 / span 2;
+  }
+}
+@media only screen and (min-width:1536px) {
+  .set{
+    grid-template-columns: auto auto auto auto auto auto auto ;
+  }
 }
 
 button .pressed {
   box-shadow: 0 3px 4px 0 #f80303;
   opacity: 0.5;
   outline: none;
-  
-  
 }
 
-.red {
-  color: rgb(30, 255, 0);
-}
 
 .drum {
   outline: none;
@@ -159,3 +188,9 @@ button .pressed {
 .drum:hover{
   cursor: grab;
 }
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
