@@ -47,7 +47,7 @@ I welcome contributions, suggestions, and feedback for improving this project. I
 
 If you have any questions or feedback, feel free to reach out to me:
 
-- Email: [your-developer@ashwintelmore.com](mailto:your-developer@ashwintelmore.com)
+- Email: [developer@ashwintelmore.com](mailto:developer@ashwintelmore.com)
 - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/ashwintelmore/)
 
 Thank you for visiting the Drum Kit Website! Enjoy playing and creating music!
